@@ -18,7 +18,7 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('pages.auth.login');
-})->middleware('auth');
+});
 
 Route::middleware(['auth'])->group(function () {
     Route::get('home', function () {
