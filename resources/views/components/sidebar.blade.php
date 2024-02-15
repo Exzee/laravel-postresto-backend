@@ -9,7 +9,7 @@
         <ul class="sidebar-menu">
             <li class="nav-item dropdown">
                 <a href="#"
-                    class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                    class="nav-link has-dropdown"><i class="fa-solid fa-house"></i></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
                     <li class='{{ Request::is('home') ? 'active' : '' }}'>
                         <a class="nav-link"
@@ -35,6 +35,20 @@
                     </li>
                 </ul>
             </li>
+
+            <li class="nav-item dropdown">
+                <a href="{{ route('products.index') }}"
+                    class="nav-link"><i class="fa-solid fa-cube"></i><span>Products</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="{{ route('categories.index') }}"
+                    class="nav-link"><i class="fa-solid fa-layer-group"></i><span>Category</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="{{ route('users.index') }}"
+                    class="nav-link"><i class="fa-sharp fa-solid fa-circle-user"></i><span>Users</span></a>
+            </li>
+
         </ul>
     </aside>
 </div>
