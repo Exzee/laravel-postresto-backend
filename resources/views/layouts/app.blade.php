@@ -16,6 +16,8 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
 
+
+
     @stack('style')
 
     <!-- Template CSS -->
@@ -66,6 +68,11 @@
     <script src="{{ asset('library/jquery.nicescroll/dist/jquery.nicescroll.min.js') }}"></script>
     <script src="{{ asset('library/moment/min/moment.min.js') }}"></script>
     <script src="{{ asset('js/stisla.js') }}"></script>
+
+    {{-- Sweet Alert --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/js/page/modules-sweetalert.js"></script>
+
 
     @stack('scripts')
 
