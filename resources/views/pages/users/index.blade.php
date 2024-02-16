@@ -84,7 +84,7 @@
                                                 <td>
                                                     {{ $user->role }}
                                                 </td>
-                                                <td>{{ $user->created_at }}</td>
+                                                <td>{{ date('d-F-Y', strtotime($user->created_at)) }}</td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
                                                         <a href='{{ route('users.edit', $user->id) }}'

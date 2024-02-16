@@ -30,7 +30,7 @@
 
 
                 <div class="card">
-                    <form action="{{ route('users.update', $user) }}" method="POST">
+                    <form action="{{ route('users.update', $user) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="card-header">

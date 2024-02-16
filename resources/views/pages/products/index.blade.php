@@ -56,8 +56,9 @@
                                             <th>Name</th>
                                             <th>Category</th>
                                             <th>Price</th>
+                                            <th>Image</th>
                                             <th>Status</th>
-                                            <th>Created at</th>
+                                            {{-- <th>Created at</th> --}}
                                             <th>Action</th>
                                         </tr>
                                         @foreach ($products as $product)
@@ -73,11 +74,17 @@
                                                     {{ $product->price }}
                                                 </td>
                                                 <td>
-                                                    {{ $product->status == 1 ? 'Active' : 'Inactive' }}
+                                                    <div @error('image') is-invalid @enderror">
+                                                        <img src="/{{ $product->image }}" width="120">
+                                                    </div>
+                                                    @error('image')
+                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
                                                 </td>
                                                 <td>
-                                                    {{ $product->created_at }}
+                                                    {{ $product->status == 1 ? 'Active' : 'Inactive' }}
                                                 </td>
+                                                {{-- <td>{{ date('d-F-Y', strtotime($product->created_at)) }}</td> --}}
                                                 <td>
                                                     <div class="d-flex justify-content-center">
                                                         <a href='{{ route('products.edit', $product->id) }}'

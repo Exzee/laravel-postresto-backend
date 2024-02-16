@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
-        name="viewport">
-    <title>@yield('title') &mdash; Stisla</title>
 
-    <!-- General CSS Files -->
-    <link rel="stylesheet"
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+        name="viewport">
+        <title>@yield('title') &mdash; Stisla</title>
+
+        <!-- General CSS Files -->
+        <link rel="stylesheet"
         href="{{ asset('library/bootstrap/dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet"
+        <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
 
+        <!-- <link rel="manifest" href="site.webmanifest"> -->
+        <link rel="shortcut icon" href="https://media.flaticon.com/dist/min/img/favicon.ico">
+        <!-- Place favicon.ico in the root directory -->
 
 
     @stack('style')

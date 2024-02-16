@@ -56,7 +56,7 @@
                                             <th>Name</th>
                                             <th>description</th>
                                             <th>Foto Product</th>
-                                            <th>Created at</th>
+                                            {{-- <th>Created at</th> --}}
                                             <th>Action</th>
                                         </tr>
                                         @foreach ($categories as $category)
@@ -71,9 +71,9 @@
                                                 <td>
                                                     {{ $category->image }}
                                                 </td>
-                                                <td>
-                                                    {{ $category->created_at }}
-                                                </td>
+                                                {{-- <td>
+                                                    {{ date('d-F-Y', strtotime($category->created_at)) }}
+                                                </td> --}}
                                                 <td>
                                                     <div class="d-flex justify-content-center">
                                                         <a href='{{ route('categories.edit', $category->id) }}'
